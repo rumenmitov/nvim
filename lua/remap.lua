@@ -2,7 +2,6 @@
   vim.keymap.set("i", "<C-c>", "<esc>")
 
 -- Leader
-  vim.g.mapleader = " "
 
 -- File explorer
   vim.keymap.set("n", "<leader>e", vim.cmd.Ex)

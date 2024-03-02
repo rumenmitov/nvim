@@ -3,13 +3,19 @@ local lsp_config = require("lspconfig")
 
 lsp.preset("recommended")
 
-lsp.ensure_installed({
-	'tsserver',
-	'eslint',
-    'cssls',
+require('mason').setup({})
+require('mason-lspconfig').setup({
+ensure_installed = {
+    'tsserver', 
     'rust_analyzer',
+    'eslint',
+    'cssls',
     'clangd',
-    'gopls',
+    'gopls'
+},
+handlers = {
+  lsp.default_setup,
+},
 })
 
 lsp_config["dartls"].setup({})
