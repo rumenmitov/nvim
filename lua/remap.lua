@@ -29,19 +29,15 @@
   vim.keymap.set("n", "<leader>fx", function()
       vim.lsp.buf.code_action()
   end)
+  vim.keymap.set("n", "<leader>gr", function()
+      vim.lsp.buf.rename();
+  end)
 
 -- Moving lines
   vim.keymap.set("i", "<C-Up>", "<esc>:m-2<enter>i")
   vim.keymap.set("i", "<C-Down>", "<esc>:m+<enter>i")
   vim.keymap.set("v", "<S-k>", ":m '<-2<CR>gv=gv")
   vim.keymap.set("v", "<S-j>", ":m '>+1<CR>gv=gv")
-
--- Global search and replace 
-  vim.keymap.set("n", "<leader>sr", function()
-    local search_term = vim.fn.input("Search: ")
-    local replace_term = vim.fn.input("Replace: ")
-    vim.cmd("%s/" .. search_term .. "/" .. replace_term)
-  end)
 
 -- Open file in new buffer
   vim.keymap.set("n", "<leader>o", "<esc>:e ")
