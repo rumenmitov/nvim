@@ -32,6 +32,19 @@
   vim.keymap.set("n", "<leader>gr", function()
       vim.lsp.buf.rename();
   end)
+  vim.keymap.set("n", "<S-k>", function()
+      vim.lsp.buf.hover();
+  end)
+  vim.keymap.set("n", "<leader>gf", function ()
+      vim.lsp.buf.format();
+  end)
+  vim.keymap.set("n", "gD", function ()
+      vim.lsp.buf.definition();
+  end)
+  vim.keymap.set("n", "gd", function ()
+      vim.lsp.buf.declaration();
+  end)
+
 
 -- Moving lines
   vim.keymap.set("i", "<C-Up>", "<esc>:m-2<enter>i")

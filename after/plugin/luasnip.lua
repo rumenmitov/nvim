@@ -1,7 +1,8 @@
 local ls = require("luasnip")
 
-vim.keymap.set({"i", "s"}, "<C-.>", function() ls.jump( 1) end, {silent = true})
-vim.keymap.set({"i", "s"}, "<C-,>", function() ls.jump(-1) end, {silent = true})
+vim.keymap.set({"i", "s"}, "<M-3>", function() ls.expand() end, {silent = true})
+vim.keymap.set({"i", "s"}, "<M-1>", function() ls.jump( 1) end, {silent = true})
+vim.keymap.set({"i", "s"}, "<M-2>", function() ls.jump(-1) end, {silent = true})
 
 local s = ls.snippet
 local t = ls.text_node
