@@ -11,7 +11,7 @@ return {
 
  -- Fuzzy finder
  {
-    'nvim-telescope/telescope.nvim', 
+    'nvim-telescope/telescope.nvim',
     tag = '0.1.5',
     dependencies = { 'nvim-lua/plenary.nvim' },
  },
@@ -39,8 +39,11 @@ return {
  -- Notifications
  'rcarriga/nvim-notify',
 
- -- Zen mode
- "folke/zen-mode.nvim",
+ -- Command Line
+ {
+     'VonHeikemen/fine-cmdline.nvim',
+     dependencies = { 'MunifTanjim/nui.nvim' }
+ },
 
  -- Smooth scroll
  'karb94/neoscroll.nvim',
@@ -90,23 +93,13 @@ return {
  -- Vim surround
  'tpope/vim-surround',
 
- -- Markdown preview
-{
-    "iamcco/markdown-preview.nvim",
-    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-    ft = { "markdown" },
-    build = function() vim.fn["mkdp#util#install"]() end,
+ -- AsciiDoc preview
+ {
+  'tigion/nvim-asciidoc-preview',
+  cmd = { 'AsciiDocPreview' },
+  ft = { 'asciidoc' },
+  build = 'cd server && npm install',
 },
-{
-  "iamcco/markdown-preview.nvim",
-  cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-  build = "cd app && yarn install",
-  init = function()
-    vim.g.mkdp_filetypes = { "markdown" }
-  end,
-  ft = { "markdown" },
-},
-
 
  -- Comments
  "Djancyp/better-comments.nvim",

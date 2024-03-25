@@ -1,8 +1,6 @@
 -- General
   vim.keymap.set("i", "<C-c>", "<esc>")
 
--- Leader
-
 -- File explorer
   vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
 
@@ -61,5 +59,5 @@
   vim.keymap.set("n", "<C-q>", ":bd!<CR>")
   vim.keymap.set("n", "<C-s>", ":up!<CR>")
 
--- Zen mode
-  vim.keymap.set("n", "<leader>z", vim.cmd.ZenMode)
+-- Command Line
+  vim.api.nvim_set_keymap('n', ':', '<cmd>FineCmdline<CR>', {noremap = true})
