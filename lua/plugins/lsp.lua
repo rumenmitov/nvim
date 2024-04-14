@@ -5,7 +5,8 @@ local LspServers = {
     'clangd',
     'lua_ls',
     'gopls',
-    'html'
+    'html',
+    'rnix'
 }
 
 
@@ -23,7 +24,8 @@ return {
                 "javascript",
                 "typescript",
                 "html",
-                "haskell"
+                "haskell",
+                "nix"
             },
 
             sync_install = false,
