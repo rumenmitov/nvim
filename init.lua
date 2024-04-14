@@ -17,5 +17,3 @@ require("lazy").setup("plugins")
 
 require("set")
 require("remap")
-require("commands")
-require("functions")

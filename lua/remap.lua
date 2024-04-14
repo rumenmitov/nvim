@@ -4,9 +4,6 @@
 -- File explorer
   vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
 
--- Terminal
-  vim.keymap.set("n", "<leader>t", vim.cmd.terminal)
-
 -- Copying and pasting from clipboard
   vim.keymap.set("n", "<S-y>", "\"+y")
   vim.keymap.set("v", "<S-y>", "\"+y")
@@ -19,29 +16,6 @@
 
 -- Searching for words
   vim.keymap.set("n", "n", "nzz")
-
--- Code help
-  vim.keymap.set("n", "<leader>d", function()
-      vim.diagnostic.open_float()
-  end)
-  vim.keymap.set("n", "<leader>fx", function()
-      vim.lsp.buf.code_action()
-  end)
-  vim.keymap.set("n", "<leader>gr", function()
-      vim.lsp.buf.rename();
-  end)
-  vim.keymap.set("n", "<S-k>", function()
-      vim.lsp.buf.hover();
-  end)
-  vim.keymap.set("n", "<leader>gf", function ()
-      vim.lsp.buf.format();
-  end)
-  vim.keymap.set("n", "gD", function ()
-      vim.lsp.buf.definition();
-  end)
-  vim.keymap.set("n", "gd", function ()
-      vim.lsp.buf.declaration();
-  end)
 
 
 -- Moving lines
@@ -58,6 +32,3 @@
   vim.keymap.set("n", "<C-n>", ":bn<CR>")
   vim.keymap.set("n", "<C-q>", ":bd!<CR>")
   vim.keymap.set("n", "<C-s>", ":up!<CR>")
-
--- Command Line
-  vim.api.nvim_set_keymap('n', ':', '<cmd>FineCmdline<CR>', {noremap = true})
