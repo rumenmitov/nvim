@@ -22,7 +22,7 @@ return {
             vim.keymap.set('n', '<leader>ff', telescope.find_files, {})
             vim.keymap.set('n', '<leader>fg', telescope.live_grep, {})
             vim.keymap.set('n', '<leader>fc', telescope.colorscheme, {})
-            vim.keymap.set("n", '<leader>fr', telescope.marks, {})
+            vim.keymap.set("n", '<leader>fr', telescope.oldfiles, {})
         end
 
     },

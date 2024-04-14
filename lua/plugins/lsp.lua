@@ -156,6 +156,7 @@ return {
             vim.keymap.set('n', 'gf', vim.lsp.buf.format, {})
             vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
             vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, {})
+            vim.keymap.set('n', 'gr', vim.lsp.buf.references, {})
             vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, {})
             vim.keymap.set('n', '<leader>r', vim.lsp.buf.rename, {})
             vim.keymap.set({ 'n', 'v' }, '<leader>fx', vim.lsp.buf.code_action, {})
