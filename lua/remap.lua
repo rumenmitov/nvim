@@ -30,5 +30,5 @@ vim.keymap.set("n", "<leader>o", "<esc>:e ")
 -- Buffers
 vim.keymap.set("n", "<C-p>", ":bp<CR>")
 vim.keymap.set("n", "<C-n>", ":bn<CR>")
-vim.keymap.set("n", "<C-q>", ":bd!<CR>")
+vim.keymap.set("n", "<C-q>", ":q!<CR>")
 vim.keymap.set("n", "<C-s>", ":up!<CR>")
