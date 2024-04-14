@@ -4,6 +4,12 @@ return {
     'tpope/vim-surround',
 
     {
+        'windwp/nvim-autopairs',
+        event = "InsertEnter",
+        config = true
+    },
+
+    {
         'tigion/nvim-asciidoc-preview',
         cmd = { 'AsciiDocPreview' },
         ft = { 'asciidoc' },
