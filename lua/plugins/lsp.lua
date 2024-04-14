@@ -11,7 +11,8 @@ return {
                 "vimdoc",
                 "javascript",
                 "typescript",
-                "html"
+                "html",
+                "haskell"
             },
 
             sync_install = false,
