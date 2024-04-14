@@ -55,6 +55,7 @@ return {
     'hrsh7th/cmp-buffer',
     'sar/cmp-lsp.nvim',
     'hrsh7th/cmp-path',
+    'dmitmel/cmp-digraphs',
 
     {
         'hrsh7th/nvim-cmp',
@@ -94,6 +95,7 @@ return {
                     { name = 'nvim_lsp' },
                     { name = 'luasnip' },
                     { name = 'path' },
+                    { name = 'digraphs' },
                 }, {
                     { name = 'buffer' },
                 }),
@@ -115,6 +117,7 @@ return {
             local lspconfig = require('lspconfig')
             lspconfig.clangd.setup({})
             lspconfig.dartls.setup({})
+            lspconfig.hls.setup({})
             lspconfig.lua_ls.setup({
                 settings = {
                     Lua = {
