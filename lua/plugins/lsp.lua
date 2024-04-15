@@ -130,6 +130,7 @@ return {
 
     {
         'neovim/nvim-lspconfig',
+        priority = 1000,
         config = function ()
             local lspconfig = require('lspconfig')
             lspconfig.clangd.setup({})
